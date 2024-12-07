@@ -36,7 +36,7 @@ export function Contact() {
           <span className="text-2xl">Contact.</span>
           <div className="h-px bg-gray-600 flex-1 ml-4" />
         </h2>
-        <p className="text-4xl">Get in Touch</p>
+        <p className="text-2xl md:text-4xl">Get in Touch</p>
         <br />
         <p className="text-gray-400 mb-8 contact-anim">
           I&apos;m currently looking for new opportunities. Whether you have a
@@ -45,7 +45,7 @@ export function Contact() {
         </p>
         <a
           href="mailto:obicyprian180@gmail.com"
-          className="inline-block px-8 py-3 border-2 border-[#4ECCA3] text-[#4ECCA3] hover:bg-[#4ECCA3] hover:text-[#0B1221] transition-colors rounded-full text-lg font-semibold contact-anim"
+          className="inline-block px-8 py-3 border-2 border-[#4ECCA3] text-[#4ECCA3] hover:bg-[#4ECCA3] hover:text-[#0B1221] transition-colors rounded-full text-sm md:text-lg font-semibold contact-anim"
         >
           Send an Email
         </a>
