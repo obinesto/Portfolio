@@ -51,7 +51,7 @@ export function Contact() {
         </a>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 gap-4 mt-8">
           <a
-            href="https://www.linkedin.com/in/cyprian-obi-6306b4"
+            href="https://www.linkedin.com/in/cyprian-obi-6306b4183"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center p-4 border border-[#4ECCA3] text-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-10 transition-colors rounded"
