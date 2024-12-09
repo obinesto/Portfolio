@@ -28,10 +28,6 @@ const skills = [
     img: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg',
   },
   {
-    name: 'Material-UI',
-    img: 'https://img.icons8.com/color/50/000000/material-ui.png',
-  },
-  {
     name: 'Redux',
     img: 'https://img.icons8.com/color/50/000000/redux.png',
   },
