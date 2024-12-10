@@ -99,8 +99,8 @@ export function About() {
               fill
               className={`object-cover transition-transform duration-1000 ${
                 animating
-                  ? "translate-x-full opacity-0"
-                  : "-translate-x-0 opacity-100"
+                  ? "translate-x-full opacity-100"
+                  : ""
               }`}
             />
           </div>
@@ -114,8 +114,8 @@ export function About() {
               fill
               className={`object-cover transition-transform duration-1000 ${
                 animating
-                  ? "translate-x-full opacity-0"
-                  : "-translate-x-0 opacity-100"
+                  ? "-translate-x-full opacity-100"
+                  : ""
               }`}
             />
           </div>
