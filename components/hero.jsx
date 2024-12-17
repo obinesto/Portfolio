@@ -31,7 +31,7 @@ export function Hero() {
           A full stack engineer with experience building web apps with modern technologies. I&apos;m able to create pixel perfect UI design with front end technologies. I can also create and implement REST-ful APIs.
         </p>
         <Link
-          href="https://drive.google.com/file/d/1Rmh64FmKvTiH-jbJC1dkZh-IcRYntW4N/view?usp=sharing"
+          href="https://drive.google.com/file/d/1KtmoT0O0bpFjf4hCdlcQ2QB7e1ln-6_1/view?usp=sharing"
           target='blank'
           className="inline-block px-6 py-2 border border-[#4ECCA3] text-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-10 transition-colors hero-anim"
         >
