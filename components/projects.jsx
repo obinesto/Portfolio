@@ -9,7 +9,7 @@ import gymAppImg1 from "../public/gymApp1.png";
 import gymAppImg2 from "../public/gymApp2.png";
 import buildingsImg from "../public/building_gallery.png"
 import apodImg from "../public/Apod.png"
-import toDoImg from "../public/to_do_app.png"
+import taskManagerImg from "../public/task_manager.png"
 import { FaLink, FaGithub, FaArrowRight } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -57,12 +57,12 @@ const projects = [
     github: "https://github.com/obinesto/gym-training-studio",
   },
   {
-    title: "To-do App",
-    description: "CRUD to-do application.",
-    image: toDoImg,
-    technologies: ["React.js", "Tailwind Css"],
-    link: "https://to-do-list-blond-sigma.vercel.app/",
-    github: "https://github.com/obinesto/REACTJS-TODOLIST",
+    title: "Task Manager",
+    description: "A task manager application that allows you assign tasks to yourself, others and also track the status of tasks assigned.",
+    image: taskManagerImg,
+    technologies: ["React.js", "Tailwind Css", "MongoDB", "Express.js", "Node.js", "Redux", "TanStack"],
+    link: "https://task-manager-gules-nu.vercel.app/",
+    github: "https://github.com/obinesto/taskManager",
   }
 ];
 
