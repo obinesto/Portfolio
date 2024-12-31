@@ -1,15 +1,15 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
+/* eslint-disable @next/next/no-img-element */
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { InfiniteSlider } from './ui/infinite-slider';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
   {
     name: 'HTML5',
-    img: 'https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-html-5-is-a-software-solution-stack-that-defines-the-properties-and-behaviors-of-web-page-logo-shadow-tal-revivo.png',
+    img: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000',
   },
   {
     name: 'CSS3',
@@ -25,7 +25,11 @@ const skills = [
   },
   {
     name: 'Next.js',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg',
+    img: 'https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000',
+  },
+  {
+    name: 'PHP',
+    img: 'https://img.icons8.com/?size=100&id=UGYn5TapNioV&format=png&color=000000',
   },
   {
     name: 'Redux',
@@ -37,11 +41,11 @@ const skills = [
   },
   {
     name: 'Express',
-    img: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg',
+    img: 'https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000',
   },
   {
     name: 'MongoDB',
-    img: 'https://img.icons8.com/color/50/000000/mongodb.png',
+    img: 'https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000',
   },
   {
     name: 'TypeScript',
@@ -86,30 +90,43 @@ export function Skills() {
     return () => ctx.revert();
   }, []);
 
+  const SkillItem = ({ skill }) => (
+    <div className="skill-item flex flex-col items-center p-4 bg-[#1A2332] text-[#4ECCA3] rounded-lg mx-2">
+      <img src={skill.img} alt={skill.name} className="w-12 h-12 mb-2" />
+      <span className="text-center text-sm">{skill.name}</span>
+    </div>
+  );
+
   return (
-    <div ref={skillsRef} className="px-8 py-32 bg-[#0D1627]" id="skills">
+    <div ref={skillsRef} className="px-8 py-32" id="skills">
       <div className="max-w-7xl mx-auto">
         <h2 className="flex items-center gap-4 mb-12">
           <span className="text-[#4ECCA3]">02.</span>
           <span className="text-2xl text-white">Skills</span>
           <div className="h-px bg-gray-600 flex-1 ml-4" />
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+        <InfiniteSlider
+          reverse={false}
+          duration={35}
+          durationOnHover={45}
+          className="py-4"
+        >
           {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="skill-item flex flex-col items-center p-4 bg-[#1A2332] text-[#4ECCA3] rounded-lg"
-            >
-              <img
-                src={skill.img}
-                alt={skill.name}
-                className="w-12 h-12 mb-2"
-              />
-              <span className="text-center text-sm">{skill.name}</span>
-            </div>
+            <SkillItem key={index} skill={skill} />
           ))}
-        </div>
+        </InfiniteSlider>
+        <InfiniteSlider
+          reverse={true}
+          duration={35}
+          durationOnHover={45}
+          className="py-4"
+        >
+          {skills.map((skill, index) => (
+            <SkillItem key={index} skill={skill} />
+          ))}
+        </InfiniteSlider>
       </div>
     </div>
   );
 }
+

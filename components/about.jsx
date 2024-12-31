@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BorderTrail } from "./ui/border-trail";
 import aboutImage1 from "../public/about_image.jpg";
 import aboutImage2 from "../public/about_image2.jpg";
 import aboutImage3 from "../public/about_image3.jpg";
@@ -63,6 +64,9 @@ export function About() {
     return () => clearInterval(interval);
   }, [animating, aboutImageHolder.length]);
 
+  const translateXFullClass = "translate-x-full";
+  const negativeTranslateXFullClass = "-translate-x-full";
+
   return (
     <div ref={aboutRef} className="px-8 py-32" id="about">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-16">
@@ -72,7 +76,7 @@ export function About() {
             <span className="text-2xl">About Me.</span>
             <div className="h-px bg-gray-600 flex-1 ml-4" />
           </h2>
-          <p className="text-gray-400 mb-4 about-anim">
+          <div className="text-gray-400 mb-4 about-anim p-1 rounded-md">
             I&apos;m a full-stack developer dedicated to building immersive and
             responsive front-end applications which are compliant with modern
             SEO standards and connecting them to custom REST-ful APIs built and
@@ -86,22 +90,25 @@ export function About() {
             my work in action. Let&apos;s connect and collaborate to turn your
             vision into reality! Together, we can create something truly
             special.
-          </p>
+            <BorderTrail
+              style={{
+                boxShadow: "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)"
+              }}
+              size={300}
+            />  
+          </div>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center gap-20">
           <div
-            className={`relative w-80 h-80 border-8 border-[#4ECCA3] rounded-lg overflow-hidden about-anim`}
-            style={{ transform: `rotate(-8deg)` }}
-          >
+            className={`relative w-80 h-80 border-8  border-[#4ECCA3] rounded-lg overflow-hidden about-anim`}
+            style={{ transform: `rotate(-8deg)` }}>
             <Image
               src={aboutImageHolder[currentIndex1]}
               alt={`Image ${currentIndex1 + 1}`}
               fill
               className={`object-cover transition-transform duration-1000 ${
-                animating
-                  ? "translate-x-full opacity-100"
-                  : ""
-              }`}
+                animating ? translateXFullClass : ""
+              } opacity-100`}
             />
           </div>
           <div
@@ -113,10 +120,8 @@ export function About() {
               alt={`Image ${currentIndex2 + 1}`}
               fill
               className={`object-cover transition-transform duration-1000 ${
-                animating
-                  ? "-translate-x-full opacity-100"
-                  : ""
-              }`}
+                animating ? negativeTranslateXFullClass : ""
+              } opacity-100`}
             />
           </div>
         </div>

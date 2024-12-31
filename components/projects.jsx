@@ -106,7 +106,7 @@ export function Projects() {
                 alt={project.title}
                 width={500}
                 height={300}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover hover:scale-110 duration-300"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
