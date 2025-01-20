@@ -60,7 +60,7 @@ const projects = [
     title: "Task Manager",
     description: "A task manager application that allows you assign tasks to yourself, others and also track the status of tasks assigned.",
     image: taskManagerImg,
-    technologies: ["React.js", "Tailwind Css", "MongoDB", "Express.js", "Node.js", "Redux", "TanStack"],
+    technologies: ["React.js", "Tailwind Css", "MongoDB", "Express.js", "Node.js", "Redux", "TanStack", "Shadcn/UI", "Google OAuth"],
     link: "https://task-manager-gules-nu.vercel.app/",
     github: "https://github.com/obinesto/taskManager",
   }
