@@ -72,8 +72,6 @@ const projects = [
       "Google OAuth",
       "React Router Dom",
       "Express.js",
-      "Bcrypt",
-      "DotEnv",
       "Jsonwebtoken",
       "MongoDB",
       "Cloudinary",
