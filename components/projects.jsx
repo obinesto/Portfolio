@@ -7,9 +7,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ecommerceImg from "../public/ecommerceHack.png";
 import gymAppImg1 from "../public/gymApp1.png";
 import gymAppImg2 from "../public/gymApp2.png";
-import buildingsImg from "../public/building_gallery.png"
-import apodImg from "../public/Apod.png"
-import taskManagerImg from "../public/task_manager.png"
+import buildingsImg from "../public/building_gallery.png";
+import apodImg from "../public/Apod.png";
+import taskManagerImg from "../public/task_manager.png";
 import { FaLink, FaGithub, FaArrowRight } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -28,7 +28,7 @@ const projects = [
     title: "Gym App",
     description: "A fitness app for tracking workouts.",
     image: gymAppImg1,
-    technologies: ["React.js", "Tailwind Css",],
+    technologies: ["React.js", "Tailwind Css"],
     link: "https://my-fitness-pal-bay.vercel.app/",
     github: "https://github.com/obinesto/MyFitnessPal",
   },
@@ -42,7 +42,8 @@ const projects = [
   },
   {
     title: "Apod Project",
-    description: "This project makes use of NASA's API to render the astronomy picture of the day (APOD).",
+    description:
+      "This project makes use of NASA's API to render the astronomy picture of the day (APOD).",
     image: apodImg,
     technologies: ["React.js", "Tailwind Css"],
     link: "https://apod-project-psi.vercel.app/",
@@ -58,12 +59,28 @@ const projects = [
   },
   {
     title: "Task Manager",
-    description: "A task manager application that allows you assign tasks to yourself, others and also track the status of tasks assigned.",
+    description:
+      "A task manager application that allows you assign tasks to yourself, others and also track the status of tasks assigned.",
     image: taskManagerImg,
-    technologies: ["React.js", "Tailwind Css", "MongoDB", "Express.js", "Node.js", "Redux", "TanStack", "Shadcn/UI", "Google OAuth"],
+    technologies: [
+      "React.js",
+      "Tailwind Css",
+      "Node.js",
+      "Redux",
+      "TanStack Query",
+      "Shadcn/UI",
+      "Google OAuth",
+      "React Router Dom",
+      "Express.js",
+      "Bcrypt",
+      "DotEnv",
+      "Jsonwebtoken",
+      "MongoDB",
+      "Cloudinary",
+    ],
     link: "https://task-manager-gules-nu.vercel.app/",
     github: "https://github.com/obinesto/taskManager",
-  }
+  },
 ];
 
 export function Projects() {
