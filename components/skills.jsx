@@ -91,7 +91,7 @@ export function Skills() {
   }, []);
 
   const SkillItem = ({ skill }) => (
-    <div className="skill-item flex flex-col items-center p-4 bg-[#1A2332] text-[#4ECCA3] rounded-lg mx-2">
+    <div className="flex flex-col items-center p-4 bg-[#1A2332] text-[#4ECCA3] rounded-lg mx-2">
       <img src={skill.img} alt={skill.name} className="w-12 h-12 mb-2" />
       <span className="text-center text-sm">{skill.name}</span>
     </div>
@@ -109,7 +109,7 @@ export function Skills() {
           reverse={false}
           duration={35}
           durationOnHover={45}
-          className="py-4"
+          className="py-4 skill-item"
         >
           {skills.map((skill, index) => (
             <SkillItem key={index} skill={skill} />

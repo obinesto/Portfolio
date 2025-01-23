@@ -20,7 +20,7 @@ const projects = [
     description:
       "A responsive apple products e-commerce demo app with payment integration.",
     image: ecommerceImg,
-    technologies: ["Html", "Vanilla.js", "Css", "PayStack", ""],
+    technologies: ["Html", "Vanilla.js", "Css", "PayStack",],
     link: "https://e-commerce-hack.vercel.app/",
     github: "https://github.com/obinesto/E-commerce_hack",
   },
