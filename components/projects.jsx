@@ -20,7 +20,7 @@ const projects = [
     description:
       "A responsive apple products e-commerce demo app with payment integration.",
     image: ecommerceImg,
-    technologies: ["Html", "Vanilla.js", "Css"],
+    technologies: ["Html", "Vanilla.js", "Css", "PayStack", ""],
     link: "https://e-commerce-hack.vercel.app/",
     github: "https://github.com/obinesto/E-commerce_hack",
   },
@@ -53,7 +53,7 @@ const projects = [
     title: "Gym Studio",
     description: "A responsive gym studio app template",
     image: gymAppImg2,
-    technologies: ["Html", "Css", "Vanilla.js"],
+    technologies: ["Html", "Css", "Vanilla.js", "OpenStreetMap"],
     link: "https://gym-training-studio.vercel.app/",
     github: "https://github.com/obinesto/gym-training-studio",
   },
