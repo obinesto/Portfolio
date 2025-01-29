@@ -68,8 +68,6 @@ const projects = [
       "Node.js",
       "Redux",
       "TanStack Query",
-      "Shadcn/UI",
-      "Pintura",
       "Google OAuth",
       "React Router Dom",
       "Express.js",
