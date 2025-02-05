@@ -81,3 +81,46 @@
     @apply bg-background text-foreground;
   }
 }
+
+.projects-container {
+  position: relative;
+  --x-offset: -50px;
+  --y-offset: -50px;
+  overflow: hidden;
+}
+
+.projects-container::before,
+.projects-container::after {
+  content: '';
+  /* background-color: red; */
+  background-color: #0A192F;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.projects-container::before {
+  inset: var(--y-offset) var(--x-offset) 0;
+}
+
+.projects-container::after {
+  inset: 0 var(--x-offset) var(--y-offset);
+  top: unset;
+}
+
+.projects-scrollable {
+  display: flex;
+  gap: 2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.project-item {
+  flex: 0 0 auto;
+  background-color: #1A2332;
+  border-radius: 0.5rem;
+  width: 400px;
+  height: 600px;
+  padding: 1rem 0rem 0rem 0rem;
+}

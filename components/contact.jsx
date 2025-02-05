@@ -29,7 +29,7 @@ export function Contact() {
   }, []);
 
   return (
-    <div ref={contactRef} className="px-8 py-32 bg-[#0D1627]" id="contact">
+    <div ref={contactRef} className="px-8 py-32" id="contact">
       <div className="max-w-7xl mx-auto">
         <h2 className="flex items-center gap-4 mb-12 contact-anim">
           <span className="text-[#4ECCA3]">04.</span>

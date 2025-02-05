@@ -1,26 +1,26 @@
-'use client'
+"use client";
 
-import { useEffect, useRef } from 'react'
-import Link from 'next/link'
-import { gsap } from 'gsap'
-import { TextEffect } from './ui/text-effect'
+import { useEffect, useRef } from "react";
+import Link from "next/link";
+import { gsap } from "gsap";
+import { TextEffect } from "./ui/text-effect";
 
 export function Hero() {
-  const heroRef = useRef(null)
+  const heroRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.hero-anim', {
+      gsap.from(".hero-anim", {
         y: 30,
         opacity: 0,
         stagger: 0.2,
         duration: 1,
-        ease: 'power3.out',
-      })
-    }, heroRef)
+        ease: "power3.out",
+      });
+    }, heroRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div ref={heroRef} className="min-h-screen flex items-center px-8 pt-32">

@@ -20,7 +20,7 @@ const projects = [
     description:
       "A responsive apple products e-commerce demo app with payment integration.",
     image: ecommerceImg,
-    technologies: ["Html", "Vanilla.js", "Css", "PayStack",],
+    technologies: ["Html", "Vanilla.js", "Css", "PayStack"],
     link: "https://e-commerce-hack.vercel.app/",
     github: "https://github.com/obinesto/E-commerce_hack",
   },
@@ -109,60 +109,64 @@ export function Projects() {
           <span className="text-2xl">Projects</span>
           <div className="h-px bg-gray-600 flex-1 ml-4" />
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="project-item bg-[#1A2332] rounded-lg overflow-hidden"
-            >
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={500}
-                height={300}
-                className="w-full h-48 object-cover hover:scale-110 duration-300"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="text-sm text-[#4ECCA3] bg-[#0D1627] px-2 py-1 rounded"
+        <div className="projects-container">
+          <div className="projects-scrollable">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="project-item"
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={500}
+                  height={300}
+                  className="w-full h-48 object-cover hover:scale-75 duration-300"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-400 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="text-sm text-[#4ECCA3] bg-[#0D1627] px-2 py-1 rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex space-x-4">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 border border-[#4ECCA3] text-[#0D1627] bg-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-70 transition-colors rounded-md"
+                      title="Visit Project"
                     >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex space-x-4">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-4 py-2 border border-[#4ECCA3] text-[#0D1627] bg-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-70 transition-colors rounded-md"
-                    title="Visit Project"
-                  >
-                    <FaLink style={{ fontSize: "20px" }} />
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-4 py-2 border border-[#4ECCA3] text-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-10 transition-colors rounded"
-                    title="View Source Code"
-                  >
-                    <FaGithub style={{ fontSize: "24px" }} />
-                  </a>
+                      <FaLink style={{ fontSize: "20px" }} />
+                    </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 border border-[#4ECCA3] text-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-10 transition-colors rounded"
+                      title="View Source Code"
+                    >
+                      <FaGithub style={{ fontSize: "24px" }} />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+        <div className="mt-12">
           <a
             href="https://github.com/obinesto?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className=" max-w-40 flex items-center px-4 py-2 border border-[#4ECCA3] text-[#0D1627] bg-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-80 transition-colors rounded"
+            className="max-w-40 flex items-center px-4 py-2 border border-[#4ECCA3] text-[#0D1627] bg-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-80 transition-colors rounded"
             title="View More"
           >
             <span className="mr-2">View More</span>
