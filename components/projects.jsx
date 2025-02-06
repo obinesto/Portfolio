@@ -28,7 +28,7 @@ const projects = [
     title: "Gym App",
     description: "A fitness app for tracking workouts.",
     image: gymAppImg1,
-    technologies: ["React.js", "Tailwind Css"],
+    technologies: ["Vanilla.js", "React.js", "Tailwind Css"],
     link: "https://my-fitness-pal-bay.vercel.app/",
     github: "https://github.com/obinesto/MyFitnessPal",
   },
