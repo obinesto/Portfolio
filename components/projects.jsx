@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,7 +10,7 @@ import gymAppImg2 from "../public/gymApp2.png";
 import buildingsImg from "../public/building_gallery.png";
 import apodImg from "../public/Apod.png";
 import taskManagerImg from "../public/task_manager.png";
-import { FaLink, FaGithub, FaArrowRight } from "react-icons/fa";
+import { FaLink, FaGithub, FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,6 +101,49 @@ export function Projects() {
     return () => ctx.revert();
   }, []);
 
+  const scrollableRef = useRef(null);
+  const [isAtStart, setIsAtStart] = useState(true);
+  const [isAtEnd, setIsAtEnd] = useState(false);
+
+  const checkScrollPosition = () => {
+    if (scrollableRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollableRef.current;
+      setIsAtStart(scrollLeft === 0);
+      setIsAtEnd(scrollLeft + clientWidth >= scrollWidth);
+    }
+  };
+
+  useEffect(() => {
+    const scrollableElement = scrollableRef.current;
+    if (scrollableElement) {
+      scrollableElement.addEventListener("scroll", checkScrollPosition);
+      checkScrollPosition();
+    }
+    return () => {
+      if (scrollableElement) {
+        scrollableElement.removeEventListener("scroll", checkScrollPosition);
+      }
+    };
+  }, []);
+
+  const scrollLeft = () => {
+    if (scrollableRef.current) {
+      scrollableRef.current.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollableRef.current) {
+      scrollableRef.current.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div ref={projectsRef} className="px-8 py-32" id="projects">
       <div className="max-w-7xl mx-auto">
@@ -110,12 +153,31 @@ export function Projects() {
           <div className="h-px bg-gray-600 flex-1 ml-4" />
         </h2>
         <div className="projects-container">
-          <div className="projects-scrollable">
+          <div ref={scrollableRef} className="projects-scrollable">
+            <button
+              onClick={scrollLeft}
+              disabled={isAtStart}
+              className={
+                isAtStart
+                  ? "hidden"
+                  : "absolute top-[80%] left-3 transform bg-[#4ECCA3] text-[#0D1627] p-2 rounded-full animate-bounce z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+              }
+            >
+              <FaArrowLeft />
+            </button>
+
+            <button
+              onClick={scrollRight}
+              className={
+                isAtEnd
+                  ? "hidden"
+                  : "absolute top-[80%] right-3 transform bg-[#4ECCA3] text-[#0D1627] p-2 rounded-full animate-bounce z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+              }
+            >
+              <FaArrowRight />
+            </button>
             {projects.map((project, index) => (
-              <div
-                key={index}
-                className="project-item"
-              >
+              <div key={index} className="project-item">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -124,7 +186,9 @@ export function Projects() {
                   className="w-full h-48 object-cover hover:scale-75 duration-300"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, i) => (

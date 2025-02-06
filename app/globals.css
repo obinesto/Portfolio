@@ -92,7 +92,6 @@
 .projects-container::before,
 .projects-container::after {
   content: '';
-  /* background-color: red; */
   background-color: #0A192F;
   height: 100px;
   position: absolute;
@@ -114,6 +113,10 @@
   gap: 2rem;
   overflow-x: scroll;
   overflow-y: hidden;
+}
+
+.projects-scrollable::-webkit-scrollbar {
+  display: none;
 }
 
 .project-item {
