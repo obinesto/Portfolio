@@ -9,7 +9,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata = {
-  title: "Cyprian Obi - Full-Stack Developer & Software Engineer",
+  title: "Cyprian Obi - Web and Full-stack Developer",
   description:
     "Experienced full-stack developer specializing in modern web applications, scalable backend solutions, and intuitive user experiences.",
 };
