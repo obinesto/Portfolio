@@ -74,6 +74,7 @@ const projects = [
       "Jsonwebtoken",
       "MongoDB",
       "Cloudinary",
+      "Sentry",
     ],
     link: "https://task-manager-gules-nu.vercel.app/",
     github: "https://github.com/obinesto/taskManager",
