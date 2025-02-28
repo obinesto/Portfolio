@@ -235,7 +235,7 @@ export function Projects() {
             title="View More"
           >
             <span className="mr-2">View More</span>
-            <FaArrowRight style={{ fontSize: "20px" }} />
+            <FaArrowRight className="size-5"/>
           </a>
         </div>
       </div>
