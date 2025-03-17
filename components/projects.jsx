@@ -209,7 +209,7 @@ export function Projects() {
                       className="inline-block px-4 py-2 border border-[#4ECCA3] text-[#0D1627] bg-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-70 transition-colors rounded-md"
                       title="Visit Project"
                     >
-                      <FaLink style={{ fontSize: "20px" }} />
+                      <FaLink className="size-6"/>
                     </a>
                     <a
                       href={project.github}
@@ -218,7 +218,7 @@ export function Projects() {
                       className="inline-block px-4 py-2 border border-[#4ECCA3] text-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-10 transition-colors rounded"
                       title="View Source Code"
                     >
-                      <FaGithub style={{ fontSize: "24px" }} />
+                      <FaGithub className="size-6"/>
                     </a>
                   </div>
                 </div>
