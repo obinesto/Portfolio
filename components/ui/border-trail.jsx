@@ -1,4 +1,4 @@
-'use client';;
+'use client';
 import { cn } from '@/lib/utils';
 import { motion } from 'motion/react';
 
@@ -6,19 +6,17 @@ export function BorderTrail({
   className,
   size = 60,
   transition,
-  delay,
   onAnimationComplete,
-  style
+  style,
 }) {
-  const BASE_TRANSITION = {
+  const defaultTransition = {
     repeat: Infinity,
     duration: 5,
     ease: 'linear',
   };
 
   return (
-    (<div
-      className='pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)]'>
+    <div className='pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)]'>
       <motion.div
         className={cn('absolute aspect-square bg-zinc-500', className)}
         style={{
@@ -29,11 +27,9 @@ export function BorderTrail({
         animate={{
           offsetDistance: ['0%', '100%'],
         }}
-        transition={{
-          ...(transition ?? BASE_TRANSITION),
-          delay: delay,
-        }}
-        onAnimationComplete={onAnimationComplete} />
-    </div>)
+        transition={transition || defaultTransition}
+        onAnimationComplete={onAnimationComplete}
+      />
+    </div>
   );
 }

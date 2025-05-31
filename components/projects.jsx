@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ecommerceImg from "../public/ecommerceHack.png";
 import gymAppImg1 from "../public/gymApp1.png";
 import gymAppImg2 from "../public/gymApp2.png";
-import buildingsImg from "../public/building_gallery.png";
+import youtubecloneImg from "../public/YoutubeClone.png";
 import apodImg from "../public/Apod.png";
 import taskManagerImg from "../public/task_manager.png";
 import { FaLink, FaGithub, FaArrowRight, FaArrowLeft } from "react-icons/fa";
@@ -26,19 +26,19 @@ const projects = [
   },
   {
     title: "Gym App",
-    description: "A fitness app for tracking workouts.",
+    description: "A fitness web app for formulating workout plans.",
     image: gymAppImg1,
     technologies: ["Vanilla.js", "React.js", "Tailwind Css"],
     link: "https://my-fitness-pal-bay.vercel.app/",
     github: "https://github.com/obinesto/MyFitnessPal",
   },
   {
-    title: "Building Gallery",
-    description: "A template website showcasing different buildings",
-    image: buildingsImg,
-    technologies: ["Html", "Css"],
-    link: "https://obinesto.github.io/Gallery-Layout/",
-    github: "https://github.com/obinesto/Gallery-Layout",
+    title: "Youtube Clone",
+    description: "A YouTube clone that allows users to search, view and play videos. Also offering user interaction features such as comments, likes, subscrptions and more.",
+    image: youtubecloneImg,
+    technologies: ["Next.js", "Tailwind Css", "Firebase", "Google OAuth", "Supabase", "Cloudinary", "Sentry", "TanStack Query"],
+    link: "https://youtube-clone-cyprianobi.vercel.app/",
+    github: "https://github.com/obinesto/youtube-clone",
   },
   {
     title: "Apod Project",

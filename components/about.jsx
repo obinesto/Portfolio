@@ -69,7 +69,7 @@ export function About() {
 
   return (
     <div ref={aboutRef} className="px-8 py-32" id="about">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-16">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-16">
         <div className="flex-1">
           <h2 className="flex items-center gap-4 mb-8 about-anim">
             <span className="text-[#4ECCA3]">01.</span>
@@ -94,7 +94,6 @@ export function About() {
               style={{
                 boxShadow: "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)"
               }}
-              size={300}
             />  
           </div>
         </div>
