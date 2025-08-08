@@ -77,7 +77,7 @@ export function Hero() {
           </TextEffect>
         </div>
         <Link
-          href="https://drive.google.com/file/d/1Wm-JKqFIScknWYCtoxMJ2q7qh2Eg4KF1/view?usp=sharing"
+          href="https://drive.google.com/file/d/1UaGZqy7tjH8TJsthnoRM-MmsSM_x-H0G/view?usp=sharing"
           target="blank"
           className="inline-block px-6 py-2 border border-[#4ECCA3] text-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-10 transition-colors hero-anim"
         >
