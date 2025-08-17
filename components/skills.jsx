@@ -109,7 +109,7 @@ export function Skills() {
           reverse={false}
           duration={35}
           durationOnHover={45}
-          className="py-4 skill-item"
+          className="py-4"
         >
           {skills.map((skill, index) => (
             <SkillItem key={index} skill={skill} />
