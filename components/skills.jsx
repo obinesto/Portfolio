@@ -1,71 +1,75 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { InfiniteSlider } from './ui/infinite-slider';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { InfiniteSlider } from "./ui/infinite-slider";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
   {
-    name: 'HTML5',
-    img: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000',
+    name: "HTML5",
+    img: "https://img.icons8.com/?size=100&id=20909&format=png&color=000000",
   },
   {
-    name: 'CSS3',
-    img: 'https://img.icons8.com/color/50/000000/css3.png',
+    name: "CSS3",
+    img: "https://img.icons8.com/color/50/000000/css3.png",
   },
   {
-    name: 'JavaScript',
-    img: 'https://img.icons8.com/color/50/000000/javascript--v1.png',
+    name: "JavaScript",
+    img: "https://img.icons8.com/color/50/000000/javascript--v1.png",
   },
   {
-    name: 'React',
-    img: 'https://img.icons8.com/ultraviolet/50/000000/react--v1.png',
+    name: "React",
+    img: "https://img.icons8.com/ultraviolet/50/000000/react--v1.png",
   },
   {
-    name: 'Next.js',
-    img: 'https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000',
+    name: "Next.js",
+    img: "https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000",
   },
   {
-    name: 'PHP',
-    img: 'https://img.icons8.com/?size=100&id=UGYn5TapNioV&format=png&color=000000',
+    name: "PHP",
+    img: "https://img.icons8.com/?size=100&id=UGYn5TapNioV&format=png&color=000000",
   },
   {
-    name: 'Redux',
-    img: 'https://img.icons8.com/color/50/000000/redux.png',
+    name: "Redux",
+    img: "https://img.icons8.com/color/50/000000/redux.png",
   },
   {
-    name: 'Node.js',
-    img: 'https://img.icons8.com/color/50/000000/nodejs.png',
+    name: "Node.js",
+    img: "https://img.icons8.com/color/50/000000/nodejs.png",
   },
   {
-    name: 'Express',
-    img: 'https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000',
+    name: "Express",
+    img: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000",
   },
   {
-    name: 'MongoDB',
-    img: 'https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000',
+    name: "MongoDB",
+    img: "https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000",
   },
   {
-    name: 'TypeScript',
-    img: 'https://img.icons8.com/color/50/000000/typescript.png',
+    name: "PostgreSQL",
+    img: "https://img.icons8.com/?size=100&id=Pv4IGT0TSpt8&format=png&color=000000",
   },
   {
-    name: 'Tailwind CSS',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
+    name: "TypeScript",
+    img: "https://img.icons8.com/color/50/000000/typescript.png",
   },
   {
-    name: 'Git',
-    img: 'https://img.icons8.com/color/50/000000/git.png',
+    name: "Tailwind CSS",
+    img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
   },
   {
-    name: 'Figma',
-    img: 'https://img.icons8.com/color/50/000000/figma--v1.png',
+    name: "Git",
+    img: "https://img.icons8.com/color/50/000000/git.png",
   },
   {
-    name: 'Postman',
-    img: 'https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png',
+    name: "Figma",
+    img: "https://img.icons8.com/color/50/000000/figma--v1.png",
+  },
+  {
+    name: "Postman",
+    img: "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/50/000000/external-postman-is-the-only-complete-api-development-environment-logo-shadow-tal-revivo.png",
   },
 ];
 
@@ -74,15 +78,15 @@ export function Skills() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.skill-item', {
+      gsap.from(".skill-item", {
         y: 50,
         opacity: 0,
         stagger: 0.1,
         duration: 0.8,
-        ease: 'power3.out',
+        ease: "power3.out",
         scrollTrigger: {
           trigger: skillsRef.current,
-          start: 'top 80%',
+          start: "top 80%",
         },
       });
     }, skillsRef);
@@ -129,4 +133,3 @@ export function Skills() {
     </div>
   );
 }
-

@@ -5,8 +5,8 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ecommerceImg from "../public/ecommerceHack.png";
-import gymAppImg1 from "../public/gymApp1.png";
-import gymAppImg2 from "../public/gymApp2.png";
+import cryptocoinImg from "../public/cryptocoin.png";
+import gymAppImg from "../public/gymApp.png";
 import youtubecloneImg from "../public/YoutubeClone.png";
 import apodImg from "../public/Apod.png";
 import taskManagerImg from "../public/task_manager.png";
@@ -16,55 +16,81 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    category: "Web Application",
     title: "E-Commerce Store",
     description:
       "A responsive apple products e-commerce demo app with payment integration.",
     image: ecommerceImg,
-    technologies: ["Html", "Vanilla.js", "Css", "PayStack"],
+    technologies: ["Html", "Vanilla JS", "CSS", "PayStack"],
     link: "https://e-commerce-hack.vercel.app/",
     github: "https://github.com/obinesto/E-commerce_hack",
   },
   {
-    title: "Gym App",
-    description: "A fitness web app for formulating workout plans.",
-    image: gymAppImg1,
-    technologies: ["Vanilla.js", "React.js", "Tailwind Css"],
-    link: "https://my-fitness-pal-bay.vercel.app/",
-    github: "https://github.com/obinesto/MyFitnessPal",
-  },
-  {
+    category: "Progressive Web Application",
     title: "Youtube Clone",
-    description: "A YouTube clone that allows users to search, view and play videos. Also offering user interaction features such as comments, likes, subscrptions and more.",
+    description:
+      "A YouTube clone that allows users to search, view and play videos. Also offering user interaction features such as comments, likes, subscrptions and more.",
     image: youtubecloneImg,
-    technologies: ["Next.js", "Tailwind Css", "Firebase", "Google OAuth", "Supabase", "Cloudinary", "Sentry", "TanStack Query"],
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "Firebase",
+      "Google OAuth",
+      "PostgreSQL",
+      "Supabase",
+      "Cloudinary",
+      "Sentry",
+      "TanStack Query",
+      "Next PWA",
+    ],
     link: "https://youtube-clone-cyprianobi.vercel.app/",
     github: "https://github.com/obinesto/youtube-clone",
   },
   {
+    category: "Web Application",
     title: "Apod Project",
     description:
       "This project makes use of NASA's API to render the astronomy picture of the day (APOD).",
     image: apodImg,
-    technologies: ["React.js", "Tailwind Css"],
+    technologies: ["React.js", "Tailwind CSS", "Axios"],
     link: "https://apod-project-psi.vercel.app/",
     github: "https://github.com/obinesto/NASA-ReactJS-App",
   },
   {
+    category: "Progressive Web Application",
+    title: "Cryptocoin App",
+    description:
+      "A crypto progressive web application (PWA) which uses Coingecko's API to provide real time information on cryptocurrency tokens.",
+    image: cryptocoinImg,
+    technologies: [
+      "Vite",
+      "React.js",
+      "CSS",
+      "React Router Dom",
+      "Axios",
+      "Vite PWA",
+    ],
+    link: "https://cyprian-obi-cryptocoin-app.vercel.app/",
+    github: "https://github.com/obinesto/Cryptocoin-App",
+  },
+  {
+    category: "Web Application",
     title: "Gym Studio",
-    description: "A responsive gym studio app template",
-    image: gymAppImg2,
-    technologies: ["Html", "Css", "Vanilla.js", "OpenStreetMap"],
+    description: "A responsive gym studio app that adapts seamlessly across devices. Also handles form handling for signup simulation.",
+    image: gymAppImg,
+    technologies: ["Html", "CSS", "Vanilla JS", "OpenStreetMap"],
     link: "https://gym-training-studio.vercel.app/",
     github: "https://github.com/obinesto/gym-training-studio",
   },
   {
+    category: "Web Application",
     title: "Task Manager",
     description:
       "A task manager application that allows you assign tasks to yourself, others and also track the status of tasks assigned.",
     image: taskManagerImg,
     technologies: [
       "React.js",
-      "Tailwind Css",
+      "Tailwind CSS",
       "Node.js",
       "Redux",
       "TanStack Query",
@@ -187,9 +213,12 @@ export function Projects() {
                   className="w-full h-48 object-cover hover:scale-75 duration-300"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
+                  <span className="flex gap-2 items-center">
+                    <p className="text-xl font-semibold mb-2">
                     {project.title}
-                  </h3>
+                  </p>
+                  <p className="text-xs text-gray-400">({project.category})</p>
+                  </span>
                   <p className="text-gray-400 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, i) => (
@@ -209,7 +238,7 @@ export function Projects() {
                       className="inline-block px-4 py-2 border border-[#4ECCA3] text-[#0D1627] bg-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-70 transition-colors rounded-md"
                       title="Visit Project"
                     >
-                      <FaLink className="size-6"/>
+                      <FaLink className="size-6" />
                     </a>
                     <a
                       href={project.github}
@@ -218,7 +247,7 @@ export function Projects() {
                       className="inline-block px-4 py-2 border border-[#4ECCA3] text-[#4ECCA3] hover:bg-[#4ECCA3] hover:bg-opacity-10 transition-colors rounded"
                       title="View Source Code"
                     >
-                      <FaGithub className="size-6"/>
+                      <FaGithub className="size-6" />
                     </a>
                   </div>
                 </div>
@@ -235,7 +264,7 @@ export function Projects() {
             title="View More"
           >
             <span className="mr-2">View More</span>
-            <FaArrowRight className="size-5"/>
+            <FaArrowRight className="size-5" />
           </a>
         </div>
       </div>
