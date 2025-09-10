@@ -41,7 +41,7 @@ export function TruncatedTechnologies({ technologies, maxLength = 10 }) {
           View all
         </button>
         {showAll && (
-          <div className="absolute bottom-full -left-[100%] mb-2 w-72 p-2 bg-[#1a2c47] border border-[#4ECCA3] rounded-md shadow-lg z-20">
+          <div className="absolute bottom-full left-[-170%] md:left-[-100%] mb-2 w-72 p-2 bg-[#1a2c47] border border-[#4ECCA3] rounded-md shadow-lg z-20">
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, i) => (
                 <span

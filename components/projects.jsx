@@ -21,7 +21,7 @@ const projects = [
     category: "Web Application",
     title: "E-Commerce Store",
     description:
-      "A fully responsive demo e-commerce application. This project showcases a complete front-end user flow, from browsing products to completing a purchase with a real payment gateway integration.",
+      "A fully responsive demo e-commerce application. Offering both user and admin dashboard, this project showcases a complete front-end user flow, from browsing products to completing a purchase with a real payment gateway integration.",
     image: ecommerceImg,
     technologies: ["Html", "Vanilla JS", "CSS", "PayStack"],
     link: "https://e-commerce-hack.vercel.app/",
@@ -221,7 +221,7 @@ export function Projects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  lazy
+                  lazy= {true}
                   className="w-full h-2/5 object-fill hover:scale-75 duration-300 mb-2"
                 />
                 <div className="relative p-2 h-3/5">
