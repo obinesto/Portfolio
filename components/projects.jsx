@@ -11,6 +11,8 @@ import youtubecloneImg from "../public/YoutubeClone.png";
 import apodImg from "../public/Apod.png";
 import taskManagerImg from "../public/task_manager.png";
 import { FaLink, FaGithub, FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { TruncatedText } from "./ui/truncated-text";
+import { TruncatedTechnologies } from "./ui/truncated-technologies";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +21,7 @@ const projects = [
     category: "Web Application",
     title: "E-Commerce Store",
     description:
-      "A responsive apple products e-commerce demo app with payment integration.",
+      "A fully responsive demo e-commerce application. This project showcases a complete front-end user flow, from browsing products to completing a purchase with a real payment gateway integration.",
     image: ecommerceImg,
     technologies: ["Html", "Vanilla JS", "CSS", "PayStack"],
     link: "https://e-commerce-hack.vercel.app/",
@@ -29,11 +31,12 @@ const projects = [
     category: "Progressive Web Application",
     title: "Youtube Clone",
     description:
-      "A YouTube clone that allows users to search, view and play videos. Also offering user interaction features such as comments, likes, subscrptions and more.",
+      "A YouTube clone that allows users to search, view and play videos. Also offering database query caching, native app behaviour, push notifications and user interaction features such as bookmarks, likes, subscrptions and more.",
     image: youtubecloneImg,
     technologies: [
       "Next.js",
       "Tailwind CSS",
+      "Shadcn/UI",
       "Firebase",
       "Google OAuth",
       "PostgreSQL",
@@ -41,6 +44,11 @@ const projects = [
       "Cloudinary",
       "Sentry",
       "TanStack Query",
+      "Zustand",
+      "Web-push",
+      "React Context",
+      "Node.js",
+      "Axios",
       "Next PWA",
     ],
     link: "https://youtube-clone-cyprianobi.vercel.app/",
@@ -52,7 +60,7 @@ const projects = [
     description:
       "This project makes use of NASA's API to render the astronomy picture of the day (APOD).",
     image: apodImg,
-    technologies: ["React.js", "Tailwind CSS", "Axios"],
+    technologies: ["Vite","React.js", "Tailwind CSS", "Axios"],
     link: "https://apod-project-psi.vercel.app/",
     github: "https://github.com/obinesto/NASA-ReactJS-App",
   },
@@ -76,7 +84,7 @@ const projects = [
   {
     category: "Web Application",
     title: "Gym Studio",
-    description: "A responsive gym studio app that adapts seamlessly across devices. Also handles form handling for signup simulation.",
+    description: "A modern, fully responsive, and visually appealing landing page template for a gym or fitness studio.",
     image: gymAppImg,
     technologies: ["Html", "CSS", "Vanilla JS", "OpenStreetMap"],
     link: "https://gym-training-studio.vercel.app/",
@@ -86,12 +94,15 @@ const projects = [
     category: "Web Application",
     title: "Task Manager",
     description:
-      "A task manager application that allows you assign tasks to yourself, others and also track the status of tasks assigned.",
+      "A robust and efficient task management application built with modern web technologies.",
     image: taskManagerImg,
     technologies: [
+      "Vite",
       "React.js",
       "Tailwind CSS",
+      "Shadcn/UI",
       "Node.js",
+      "Axios",
       "Redux",
       "TanStack Query",
       "Google OAuth",
@@ -162,6 +173,8 @@ export function Projects() {
     }
   };
 
+
+
   const scrollRight = () => {
     if (scrollableRef.current) {
       scrollableRef.current.scrollBy({
@@ -208,29 +221,19 @@ export function Projects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={500}
-                  height={300}
-                  className="w-full h-48 object-cover hover:scale-75 duration-300"
+                  lazy
+                  className="w-full h-2/5 object-fill hover:scale-75 duration-300 mb-2"
                 />
-                <div className="p-6">
-                  <span className="flex gap-2 items-center">
-                    <p className="text-xl font-semibold mb-2">
+                <div className="relative p-2 h-3/5">
+                  <span className="flex gap-2 items-center mb-2">
+                    <p className="text-xl font-semibold">
                     {project.title}
                   </p>
-                  <p className="text-xs text-gray-400">({project.category})</p>
+                  <p className="text-xs text-[#4ECCA3] bg-[#0D1627] px-2 py-1 rounded">{project.category}</p>
                   </span>
-                  <p className="text-gray-400 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="text-sm text-[#4ECCA3] bg-[#0D1627] px-2 py-1 rounded"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex space-x-4">
+                  <TruncatedText text={project.description} maxLength={90} />
+                  <TruncatedTechnologies technologies={project.technologies} />
+                  <div className="flex space-x-4 absolute bottom-16">
                     <a
                       href={project.link}
                       target="_blank"
