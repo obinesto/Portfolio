@@ -221,8 +221,8 @@ export function Projects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  lazy= {true}
-                  className="w-full h-2/5 object-fill hover:scale-75 duration-300 mb-2"
+                  lazy
+                  className="w-full h-2/5 object-fill hover:scale-75 transition-transform duration-500 ease-in-out mb-2"
                 />
                 <div className="relative p-2 h-3/5">
                   <span className="flex gap-2 items-center mb-2">
