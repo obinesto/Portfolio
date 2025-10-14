@@ -77,7 +77,7 @@ export function About() {
             <div className="h-px bg-gray-600 flex-1 ml-4" />
           </h2>
           <div className="text-gray-400 mb-4 about-anim p-1 rounded-md">
-            I&apos;m a full-stack developer dedicated to building immersive and
+            I&apos;m a web & full-stack developer dedicated to building immersive and
             responsive front-end applications which are compliant with modern
             SEO standards and connecting them to custom REST-ful APIs built and
             maintained by me. I thrive on tackling complex problems and believe

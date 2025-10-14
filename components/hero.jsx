@@ -70,7 +70,7 @@ export function Hero() {
             delay={1.5}
             className="max-w-2xl text-gray-400 mb-8"
           >
-            A full stack developer with experience building web apps with modern
+            A web & full stack developer with experience building web apps with modern
             technologies. I&apos;m able to create pixel perfect UI design with
             front end technologies. I can also create and implement REST-ful
             APIs.
